@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+
+# Local data / runtime artifacts
+static/uploads/
+database.csv
+
+# Editors
+.vscode/
+.idea/

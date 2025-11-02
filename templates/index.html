@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Emotion Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h2>Emotion Detection (Image Upload)</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        <label>Optional Name (for logging):</label>
+        <input type="text" name="name" placeholder="e.g., Jane Doe" />
+        <br><br>
+        <input type="file" name="file" accept="image/*" required />
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if emotion %}
+    <h3>Detected Emotion: {{ emotion }}</h3>
+    {% endif %} {% if img_url %}
+    <img src="{{ img_url }}" alt="uploaded image" width="220" /> {% endif %}
+</body>
+
+</html>
